@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adonai Pinturas</title>
+    <link rel="stylesheet" href="css\localizacao.css">
+</head>
+<body>
+   
+    <header class="header">
+        <div>
+            <img src="images\logo-adonai2.png" class="logo"> </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="localizacao.html">Localização</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+
+<section>
+    <img src= "images\localizacao.png"  class="banner-img" alt="banner adonaipinturas">
+</section>
+
+
+<section class="map-section">
+    <h2>Onde estamos</h2>
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.1285211349964!2d-46.464359388302746!3d-23.45582815763703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8a7bed644b39%3A0xe641de0857d485ec!2sAdonai%20Pinturas!5e0!3m2!1spt-BR!2sbr!4v1763672665871!5m2!1spt-BR!2sbr"
+        width="600"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</section>
+
+
+
+    <footer class="footer">
+    <div class="contact-info">
+        <p>Contato: (11) 91326-0286</p>
+
+        <div class="social-media">
+            <img src="images/logo-insta.png" alt="Instagram" class="insta-icon">
+            <a href="https://www.instagram.com/adonaipinturas" target="_blank">
+                @adonaipinturas
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-left, .fade-right");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-visible");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -4,27 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adonai Pinturas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css\index.css">
 </head>
 <body>
    
     <header class="header">
         <div>
-            <img src="images\logo-adonai.png" class="logo"> </div>
+            <img src="images\logo-adonai2.png" class="logo"> </div>
         </div>
 
         <nav class="nav-menu">
-            <a href="#">Home</a>
-            <a href="#">Localização</a>
+            <a href="index.html">Home</a>
+            <a href="localizacao.html">Localização</a>
             <a href="#">Sobre</a>
         </nav>
     </header>
 
-    <section class="banner">
-        <img src="images\logo-adonai.png" alt="Banner Adonai" class="logo">
+<section>
+    <img src= "images\banner.adonaii.jpg" class="banner" alt="banner adonaipinturas">
+</section>
+
+    <section class="texto">
+        <p class="services-title">Somos especialistas em Pinturas Prediais e<br>Restauração de Fachadas.</p>
+
+        <ul class="services-list">
+            <li>PINTURA DE FACHADAS</li>
+            <li>RESTAURAÇÃO DE FACHADAS</li>
+            <li>HIDROJATEAMENTO</li>
+            <li>IMPERMEABILIZAÇÃO</li>
+        </ul>
     </section>
 
-    
+
+
+
+    <section class="before-after">
+    <div class="item">
+        <h3>Antes</h3>
+        <img src="images/antes1 (1).jpg" class="antes fade-left" alt="Antes">
+    </div>
+
+    <div class="item">
+        <h3>Depois</h3>
+        <img src="images/depois1.jpg" class="depois fade-right" alt="Depois">
+    </div>
+</section>
+
+
+<section class="before-after">
+    <div class="item">
+        <h3>Antes</h3>
+        <img src="images/antes2.jpg" class="antes fade-left" alt="Antes">
+    </div>
+
+    <div class="item">
+        <h3>Depois</h3>
+        <img src="images/depois2.jpg" class="depois fade-right" alt="Depois">
+    </div>
+</section>
+
+
+<section class="before-after">
+    <div class="item">
+        <h3>Antes</h3>
+        <img src="images/antes3.jpg" class="antes fade-left" alt="Antes">
+    </div>
+
+    <div class="item">
+        <h3>Depois</h3>
+        <img src="images/depois3.jpg" class="depois fade-right" alt="Depois">
+    </div>
+</section>
+
 <footer class="footer">
     <div class="contact-info">
         <p>Contato: (11) 91326-0286</p>
@@ -39,7 +90,23 @@
     </div>
 </footer>
 
-    <script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-left, .fade-right");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-visible");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
